@@ -7,7 +7,7 @@ def read_decode_input():
 #T which is a 26 x 26 weight matrix
 #T is row major T_11, T_21, T_31 ..
 
-	with open("../data/decode_input.txt", "r") as f:
+	with open("C:/Users/prana/Desktop/Fall 23/Adv ML/LAB1/CRF-master/data/decode_input.txt", "r") as f:
 		raw_data = f.read().split("\n")
 
 	X = numpy.array(raw_data[:100*128], dtype=float).reshape(100,128)
@@ -23,7 +23,7 @@ def read_train_struct():  #contemplate modifying this for performance reasons
 #dataX number of examples by 128 currently a numpy array
 #dataY number of examples by 2 "array" (each example has a label and a qid)
 
-	with open("../data/train_struct.txt", "r") as f:
+	with open("C:/Users/prana/Desktop/Fall 23/Adv ML/LAB1/CRF-master/data/train_struct.txt", "r") as f:
 		raw_data = f.read()
 	raw_data = raw_data.split("\n")
 
@@ -41,7 +41,7 @@ def read_train_struct():  #contemplate modifying this for performance reasons
 
 def read_model():
 #function to read model for 2a
-	with open("../data/model.txt", "r") as f:
+	with open("C:/Users/prana/Desktop/Fall 23/Adv ML/LAB1/CRF-master/data/model.txt", "r") as f:
 		raw_data = f.read()
 	raw_data = raw_data.split("\n")
 
@@ -56,7 +56,7 @@ def read_train():
 	mapping = list(enumerate(ascii_lowercase))
 	mapping = { i[1]:i[0] for i in mapping }
 
-	with open("../data/train.txt", "r") as f:
+	with open("C:/Users/prana/Desktop/Fall 23/Adv ML/LAB1/CRF-master/data/train.txt", "r") as f:
 		raw_data = f.read()
 	raw_data = raw_data.split("\n")
 
@@ -80,7 +80,7 @@ def read_test():
 	mapping = list(enumerate(ascii_lowercase))
 	mapping = { i[1]:i[0] for i in mapping }
 
-	with open("../data/test.txt", "r") as f:
+	with open("C:/Users/prana/Desktop/Fall 23/Adv ML/LAB1/CRF-master/data/test.txt", "r") as f:
 		raw_data = f.read()
 	raw_data = raw_data.split("\n")
 
